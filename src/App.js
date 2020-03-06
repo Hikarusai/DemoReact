@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
+import React,{Component} from 'react';
 import './App.css';
+import ColorBox from './components/ColorBox';
+import demo from './demoRedux/demo';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props){
+    super(props)
+    this.state={
+      showColorBox: true
+    }
+  }
+  removeColorBox=()=>{
+    this.setState({ showColorBox : !this.state.showColorBox});
+  }
+  render(){
+
+    console.log('App render ');
+
+    return(
+      <div className='App'>
+        
+        <h1>Test Component</h1>
+        <button onClick={this.removeColorBox}>Remove ColorBox</button>
+        { this.state.showColorBox && <ColorBox/>}
+        <hr/>
+
+
+      </div>
+    )
+  }
 }
 
 export default App;
