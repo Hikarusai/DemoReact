@@ -22,3 +22,32 @@ button{
   padding: 10px;
   background-color: dodgerblue;
 }
+
+.NumberProvider{
+  height: 200px;
+  background-color: #ddd;
+}
+.RedBox{
+  background-color: red;
+  height: 200px;
+  position: relative;
+ 
+}
+.RedBox .BlueBox .OrangeBox{
+  position: absolute;
+  background-color: orange;
+  width: 70%;
+  height: 50%;
+  top: 30px;
+  left: 40px;
+
+}
+.RedBox .BlueBox{
+  background-color: blue;
+  width: 70%;
+  height: 50%;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+
+}
