@@ -10,6 +10,10 @@ import BlueBox from './ContextAPI/BlueBox';
 import OrangeBox from './ContextAPI/OrangeBox';
 import Image from './HigherOderComponent/Image';
 import HoverOpacity from './HigherOderComponent/HoverOpacity';
+import WithHoverComponet from './HigherOderComponent/withHoverOpacity';
+import withHoverOpacity from './HigherOderComponent/withHoverOpacity';
+ 
+const HigherOderHover=withHoverOpacity(Image);
 
 class App extends Component {
   constructor(props){
@@ -47,10 +51,11 @@ class App extends Component {
         <hr/>
 
         <h1>Demo Higher Oder Component</h1>
-        <HoverOpacity>
-          <Image/>
+        {/* <HoverOpacity>
+          <Image src='https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/images/image_licorice.jpg'/>
         </HoverOpacity>
-
+        */}
+        <HigherOderHover src='https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/images/image_licorice.jpg'/>
       </div>
     )
   }

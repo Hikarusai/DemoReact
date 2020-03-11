@@ -16,7 +16,7 @@ export default class extends Component{
     }
     render(){
         return(
-            <div style={{opacity:this.state.isHovered?0.5:1}} 
+            <div className='HoverOpacity' style={{opacity:this.state.isHovered?0.5:1 }} 
                 onMouseEnter={this.onMouseEnter.bind(this)}
                 onMouseLeave={this.onMouseLeave.bind(this)}
             >
